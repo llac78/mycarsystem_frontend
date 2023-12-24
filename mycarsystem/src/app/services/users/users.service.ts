@@ -3,32 +3,33 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../../models/user/user.model';
 
-const baseUrl = 'http://localhost:8080/api/users';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  constructor(private http: HttpClient) { }
+  private baseURL = "http://localhost:8080/api/users";
+
+  constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(baseUrl);
+    return this.httpClient.get<User[]>(`${this.baseURL}`);
   }
 
-  getById(id: any): Observable<User> {
-    return this.http.get(`${baseUrl}/${id}`);
+  getById(id: number): Observable<User> {
+    return this.httpClient.get<User>(`${this.baseURL}/${id}`);
   }
 
-  create(data: any): Observable<any> {
-    return this.http.post(baseUrl, data);
+  create(user: User): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}`, user);
   }
 
-  update(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
+  update(id: number, user: User): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}/${id}`, user);
   }
 
-  delete(id: any): Observable<any> {
-    return this.http.delete(`${baseUrl}/${id}`);
+  delete(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 }

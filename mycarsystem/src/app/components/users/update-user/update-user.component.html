@@ -1,1 +1,64 @@
-<p>update-user works!</p>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Update User </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> First Name</label>
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName"
+                            name="firstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Last Name</label>
+                        <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName"
+                            name="lastName">
+                    </div>
+
+                    <div class="form-group">
+                        <label> e-mail </label>
+                        <input type="text" class="form-control" id="email" [(ngModel)]="user.email"
+                            name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Birthday </label>
+                        <input type="text" class="form-control" id="birthday" [(ngModel)]="user.birthday"
+                            name="birthday">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Login </label>
+                        <input type="text" class="form-control" id="login" [(ngModel)]="user.login"
+                            name="login">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Password </label>
+                        <input type="text" class="form-control" id="password" [(ngModel)]="user.password"
+                            name="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label> phone </label>
+                        <input type="text" class="form-control" id="phone" [(ngModel)]="user.phone"
+                            name="phone">
+                    </div>
+
+                  <!--  <div class="form-group">
+                        <label> Cars </label>
+                        <input type="text" class="form-control" id="cars" [(ngModel)]="user.cars"
+                            name="cars">
+                    </div> -->
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

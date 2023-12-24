@@ -19,9 +19,9 @@ import { UpdateUserComponent } from './components/users/update-user/update-user.
     AddUserComponent,
     UserDetailsComponent,
     UsersListComponent,
-    CarsListComponent,
-    CarDetailsComponent,
-    AddCarComponent,
+   // CarsListComponent,
+   // CarDetailsComponent,
+   // AddCarComponent,
     UpdateUserComponent
   ],
   imports: [
